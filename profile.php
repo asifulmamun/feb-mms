@@ -6,8 +6,11 @@
 	include 'function/connection.php'; // connection
 	session_start(); // Start Session
 	if(empty($_SESSION['feb_wp_get_current_user_id'])){
-		header('Location:'.$_SESSION['feb_main_web_home']);
-		header('Location: ' . )
+		header("Location:login.php");
+
+
+
+		
 	}// if
 
 	// Start here Dashboard For @administrator Editable or anythings

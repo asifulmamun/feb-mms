@@ -1,4 +1,4 @@
-<form>
+<form action="dashboar.php">
 	
 	<input type="email" name="email" placeholder="E-mail"><br>
 	<input type="password" name="password" placeholder="Password"><br>
