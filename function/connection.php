@@ -25,8 +25,5 @@
 		if (!$conn) {
 		    die("Connection Failed..!<br><b>Problem: </b> " . mysqli_connect_error());
 		}
-		elseif ($conn) {
-			echo "connection okk <br>";
-		}
 	}// elseif
  ?>
