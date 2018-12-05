@@ -20,9 +20,9 @@
 		$tprefix = $_SESSION['feb_db_table_prefix'];
 
 		// Create connection
-		$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+		$feb_db_connection = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
 		// Check connection
-		if (!$conn) {
+		if (!$feb_db_connection) {
 		    die("Connection Failed..!<br><b>Problem: </b> " . mysqli_connect_error());
 		}
 	}// elseif

@@ -22,7 +22,7 @@
 
 			    	$temp_feb_dashboard_table_name = $_SESSION['feb_db_table_prefix']."users";
 					$sql = "SELECT * FROM $temp_feb_dashboard_table_name";
-					$result = $conn->query($sql);
+					$result = $feb_db_connection->query($sql);
 					if ($result->num_rows > 0) {
 					    // output data of each row
 					    while($row = $result->fetch_assoc()) {
@@ -32,13 +32,18 @@
 			      <td><?php echo $row["user_nicename"]; ?></td>
 			    </tr>
 			     <?php
-					    }
-					}
+					    } // while
+					} // if
 				 ?>
 			  </tbody>
 			</table>
 		</div>
 
+<?php 
 
+$feb_wp_get_current_user = $_SESSION['feb_wp_get_current_user_id'];
+			// $feb_user_id_check = feb_user_id_check($feb_wp_get_current_user_id);
+
+			echo $feb_wp_get_current_user; ?>
 </body>
 </html>
