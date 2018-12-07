@@ -39,11 +39,5 @@
 			</table>
 		</div>
 
-<?php 
-
-$feb_wp_get_current_user = $_SESSION['feb_wp_get_current_user_id'];
-			// $feb_user_id_check = feb_user_id_check($feb_wp_get_current_user_id);
-
-			echo $feb_wp_get_current_user; ?>
 </body>
 </html>
