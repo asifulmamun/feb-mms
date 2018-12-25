@@ -1,0 +1,32 @@
+{
+    "name": "asifulmamun/feb-mms",
+    "type": "wpGlobalPlugin",
+    "description": "Global Plugin for member manage.",
+    "keywords": ["feb-mms", "february member managment system"],
+    "homepage": "https://github.com/asifulmamunProjects/feb-mms",
+    "license": "none",
+    "authors": [
+        {
+            "name": "Al Mamun",
+            "email": "asifulmamun@gmail.com",
+            "homepage": "https://asifulmamun.wordpress.com",
+            "role": "Creator"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            
+        }
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    }
+}
