@@ -3,6 +3,20 @@
 	Here is all user fuction
 */
 
+		// feb id check
+	function feb_user_id_check($wp_user_id){
+		global $feb_db_connection;
+
+		$sql = "SELECT `wp_user_id` FROM `nrb_feb_user_information` WHERE `wp_user_id`=$wp_user_id";
+
+		$result = mysqli_query($feb_db_connection,$sql);
+		$count = mysqli_num_rows($result);
+		return $count;
+	} // function feb_user_id_check
+
+	
+
+
 	// Get user Passport Number
 	function feb_get_user_passport_number($wp_user_id){
 		global $feb_db_connection;
@@ -16,25 +30,10 @@
 					echo $row["wp_user_id"]."<br>";
 			    	echo $row["passport_number"]."<br>";
 			    	
-			      
-			    
 				} // while
 			} // if
 				 
 	} // function feb_get_user_passport_number
-
-
-	function feb_user_id_check($wp_user_id){
-		global $feb_db_connection;
-
-		$sql = "SELECT * FROM `nrb_feb_user_information` WHERE `wp_user_id`=$wp_user_id";
-
-				
-		$result = mysqli_query($feb_db_connection,$sql);
-		$count = mysqli_num_rows($result);
-		return $count;
-	}
-
 
 
 

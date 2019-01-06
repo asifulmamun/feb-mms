@@ -18,6 +18,7 @@
 			@Then this variable will use for true or false mens boolion Algebra
 		*/
 		$feb_user_id_checks = feb_user_id_check($_SESSION['feb_wp_get_current_user_id']); // check this id stored in feb user table - if user stored result 
+
 		if ($feb_user_id_checks == 0) {
 			$feb_wp_get_current_user_id = $_SESSION['feb_wp_get_current_user_id']; // declare current user id in variable
 			echo "need insert data " . $feb_wp_get_current_user_id ."<br>";
@@ -29,12 +30,14 @@
 				header('Location:profile.php');
 			} else {
 				echo "<br><br>" . $insert . "<br>" . mysqli_error($feb_db_connection);
-
 			} // else
 			mysqli_close($feb_db_connection);
 		} elseif ($feb_user_id_checks == 1) {
 			echo "include profile template" . "<br>";
-			echo feb_get_user_passport_number($_SESSION['feb_wp_get_current_user_id']);
+			
+			//show frofile information from database thrhough wp_user id seession
+			feb_get_user_passport_number($_SESSION['feb_wp_get_current_user_id']);
+			echo feb_user_id_check($_SESSION['feb_wp_get_current_user_id']);
 		} // elseif
 			
 	}// elseif
