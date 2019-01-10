@@ -13,11 +13,16 @@
 	}// if
 	// Start here Dashboard For @administrator Editable or anythings
 	elseif(!empty($_SESSION['feb_wp_get_current_user_id'])){
-		$servername = $_SESSION['feb_host']; // Server/Host Name
-		$dbusername = $_SESSION['feb_db_user_name']; // Database User Name
-		$dbpassword = $_SESSION['feb_db_user_password']; // Database Password
-		$dbname = $_SESSION['feb_db_name']; // Database Table Name
-		$tprefix = $_SESSION['feb_db_table_prefix'];
+		// all server and connection information from wp-config.php
+		$servername = $_SESSION['feb_host']; // Server/Host Name from wp config
+		$dbusername = $_SESSION['feb_db_user_name']; // Database User Name from wp config
+		$dbpassword = $_SESSION['feb_db_user_password']; // Database Password from wp config
+		$dbname = $_SESSION['feb_db_name']; // Database Name from wp from wp config
+		$tprefix = $_SESSION['feb_db_table_prefix']; // Tabel prefix from wp config
+
+		// Declare data
+		$feb_table_name_user_information = "feb_user_information"; // table name feb user information
+		$tprefix_feb_user_information = $tprefix.$feb_table_name_user_information; // Table Name with prefix user information 
 
 		// Create connection
 		$feb_db_connection = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);

@@ -17,28 +17,39 @@
 				if wp user information has not stored in feb database result will 0 and stored in variable
 			@Then this variable will use for true or false mens boolion Algebra
 		*/
-		$feb_user_id_checks = feb_user_id_check($_SESSION['feb_wp_get_current_user_id']); // check this id stored in feb user table - if user stored result 
+		$feb_user_id_checks = feb_user_id_check($_SESSION['feb_wp_get_current_user_id']); // check this id stored in feb user table - if user stored result true or false with count 0 or 1
 
+		// if wp_user_id is not exist in database return 0 and insert id with this condition
 		if ($feb_user_id_checks == 0) {
 			$feb_wp_get_current_user_id = $_SESSION['feb_wp_get_current_user_id']; // declare current user id in variable
-			echo "need insert data " . $feb_wp_get_current_user_id ."<br>";
-			// query for insert data
-	 		$insert = "INSERT INTO `nrb_feb_user_information`(`wp_user_id`) VALUES ($feb_wp_get_current_user_id)";
+			$feb_wp_get_username = feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);// wp current user name
+			echo "need to insert data <br>";
+			// query for insert data - user id in data base
+	 		$insert = "INSERT INTO $tprefix_feb_user_information (`wp_user_id`,`username`) VALUES ($feb_wp_get_current_user_id, '$feb_wp_get_username')";
 			
 			if (mysqli_query($feb_db_connection, $insert)) {
 				echo "inserted";
-				header('Location:profile.php');
+				// header('Location:profile.php');
 			} else {
-				echo "<br><br>" . $insert . "<br>" . mysqli_error($feb_db_connection);
+				echo $tprefix_feb_user_information . "<b> Data is not inserted. Error: <b>" . $insert . mysqli_error($feb_db_connection);
 			} // else
-			mysqli_close($feb_db_connection);
+
+		  // if wp_user_id exist in data base return 1 in variable: $feb_user_id_checks and work this elsif condition
 		} elseif ($feb_user_id_checks == 1) {
-			echo "include profile template" . "<br>";
-			
+
+
+			echo "include profile template <br>";
+		
 			//show frofile information from database thrhough wp_user id seession
+
 			feb_get_user_passport_number($_SESSION['feb_wp_get_current_user_id']);
-			echo feb_user_id_check($_SESSION['feb_wp_get_current_user_id']);
+
+			feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
+
+
+			// echo feb_user_id_check($_SESSION['feb_wp_get_current_user_id']);
+
 		} // elseif
 			
-	}// elseif
+	}// elseif !empty $_SESSION['feb_wp_get_current_user_id']
 ?>
