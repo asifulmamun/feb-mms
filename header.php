@@ -6,7 +6,7 @@
   include ('function/feb_config.php'); // configuraton file
   
   echo feb_install_dir(1);
-  echo feb_install_dir(1);
+  // echo feb_install_dir(1);
 
 
 ?>
