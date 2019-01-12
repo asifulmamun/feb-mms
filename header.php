@@ -5,8 +5,13 @@
 
   include ('function/feb_config.php'); // configuraton file
   
-  echo feb_install_dir(1);
-  // echo feb_install_dir(1);
+
+  
+  $feb_install_dir = new feb_install_directory;
+
+  echo $feb_install_dir->install_dir;
+
+
 
 
 ?>
