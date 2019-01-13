@@ -4,12 +4,16 @@
   */
 
   include ('function/feb_config.php'); // configuraton file
-  
+
+
 
   
   $feb_install_dir = new feb_install_directory;
+ 
 
-  echo $feb_install_dir->install_dir;
+
+  echo $feb_install_dir->feb_install_dir3;
+
 
 
 
