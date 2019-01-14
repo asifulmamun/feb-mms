@@ -4,20 +4,6 @@
   */
 
   include ('function/feb_config.php'); // configuraton file
-
-
-
-  
-  $feb_install_dir = new feb_install_directory;
- 
-
-
-  echo $feb_install_dir->feb_install_dir3;
-
-
-
-
-
 ?>
 
 <!doctype html>
@@ -31,7 +17,7 @@
     <!-- materialize Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- theme css -->
-    <link rel="stylesheet" type="text/css" href="<?php //feb_install_dir(1); ?>/assets/css/user.css">
+    <link rel="stylesheet" type="text/css" href="<?php $feb_install_dir->path(); ?>/assets/css/user.css">
     <title>Hello, world!</title>
   </head>
   <body>

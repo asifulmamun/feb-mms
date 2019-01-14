@@ -4,6 +4,6 @@
 	<!-- materialize Compiled and minified JavaScript -->
 	<script  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<!-- theme js -->
-	<?php //feb_install_dir(1); ?><script src="/assets/js/user.js"></script>
+	<script src="<?php $feb_install_dir->path(); ?>/assets/js/user.js"></script>
 	</body>
 </html>
