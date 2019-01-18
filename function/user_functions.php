@@ -27,11 +27,29 @@
 		if ($result->num_rows > 0) {
 		    // output data of each row
 		    while($row = $result->fetch_assoc()) {
-				$feb_wp_get_username = $row["user_login"];
+				$feb_wp_get_username = $row[$select_column_name_search_data];
 				return $feb_wp_get_username;
 			} // while
 		} // if		 
 	} // function feb_wp_get_username
+
+	// get wp email from wordpress
+	function feb_wp_get_email($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix; // table name with prefix
+		$table = $tprefix.'users'; // get table prefix and users table and make full table
+		$select_column_name_search_data = 'user_email'; // column name which is need result to out or get data
+		$column_name_key_1 = 'ID'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $table WHERE $column_name_key_1=$wp_user_id";
+		$result = $feb_db_connection->query($sql);
+		if ($result->num_rows > 0) {
+		    // output data of each row
+		    while($row = $result->fetch_assoc()) {
+				$feb_wp_get_username = $row[$select_column_name_search_data];
+				return $feb_wp_get_username;
+			} // while
+		} // if		 
+	} // function feb_wp_get_email
 
 	// get passport number
 	function feb_get_user_passport_number($wp_user_id){

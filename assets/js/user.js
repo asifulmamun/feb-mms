@@ -11,3 +11,8 @@ $(".dropdown-trigger").dropdown();
   $(document).ready(function(){
     $('.datepicker').datepicker();
   });
+
+  // Select Option - for edit user porfile
+  $(document).ready(function(){
+    $('select').formSelect();
+  });

@@ -28,8 +28,9 @@
 					    while($row = $result->fetch_assoc()) {
 				?>
 			    <tr>
+			    	<?php $duse = "user_nicename"; ?>
 			      <th><?php echo $row["ID"]; ?></th>
-			      <td><?php echo $row["user_nicename"]; ?></td>
+			      <td><?php echo $row[$duse]; ?></td>
 			    </tr>
 			     <?php
 					    } // while

@@ -23,9 +23,10 @@
 		if ($feb_user_id_checks == 0) {
 			$feb_wp_get_current_user_id = $_SESSION['feb_wp_get_current_user_id']; // declare current user id in variable
 			$feb_wp_get_username = feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);// wp current user name
+			$feb_wp_get_email = feb_wp_get_email($_SESSION['feb_wp_get_current_user_id']);// wp current user email
 			echo "need to insert data <br>";
 			// query for insert data - user id in data base
-	 		$insert = "INSERT INTO $tprefix_feb_user_information (`wp_user_id`,`username`) VALUES ($feb_wp_get_current_user_id, '$feb_wp_get_username')";
+	 		$insert = "INSERT INTO $tprefix_feb_user_information (`wp_user_id`,`username`,`email`) VALUES ($feb_wp_get_current_user_id, '$feb_wp_get_username', '$feb_wp_get_email')";
 			
 			if (mysqli_query($feb_db_connection, $insert)) {
 				echo "inserted";
@@ -44,7 +45,9 @@
 
 			feb_get_user_passport_number($_SESSION['feb_wp_get_current_user_id']);
 
-			feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
+			echo feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
+			echo feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
+			echo feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
 
 
 			// echo feb_user_id_check($_SESSION['feb_wp_get_current_user_id']);
