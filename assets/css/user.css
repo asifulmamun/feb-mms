@@ -5,3 +5,12 @@
 nav{
 	background-color: #25A9BD;
 }
+
+a:hover{
+	cursor: pointer !important;
+}
+
+.edit_profile_submit_btn .waves-effect input[type="submit"]{
+	color: #fff;
+	cursor: pointer;
+}
