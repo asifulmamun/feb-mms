@@ -15,7 +15,6 @@ function feb_install_dir(){
 		return true; 
   	}
 } // check_ssl
-
 if (check_ssl()) {
 	$protocol = "https://"; // decalre protocl as SSL
 } else {
@@ -29,7 +28,6 @@ $install_dir = $protocol.$_SERVER['SERVER_NAME']."/".$install_path; // !don't to
 return $install_dir;
 } // print_install_dir()
 $feb_install_di = feb_install_dir();
-
 // Class for print any where this directory path
 class feb_install_directory{
 	public function path(){
@@ -37,7 +35,7 @@ class feb_install_directory{
 		echo $feb_install_di;
 	} // path()
 } // class feb_install_directory
-$feb_install_dir = new feb_install_directory; // create object for path directory installd
+$feb_install_dir = new feb_install_directory; // create object for path directory installd use for print director <?php $feb_install_dir->path(); same as
 
 
 

@@ -1,8 +1,16 @@
 <?php 
+	if ($_SERVER['REQUEST_METHOD'] !== "POST") {
+		header("Location: edit-profile.php");
+		die();
+	}
 
-	$time = $_POST['date_of_birth'];
+	
 
-	echo $time;
+
+
+
+
+
 
 
 
@@ -14,27 +22,26 @@
 
  ?>
 
-<br>
-
- <?php 
 
 
- 	$time = strtotime($time);
 
-	$newformat = date('Y-m-d',$time);
 
-	echo $newformat;
 
+
+
+
+
+
+
+
+ <?php
+	// $time = $_POST['DateOfBirth'];
+
+	// echo $time;
+
+ 	// 	$time = strtotime($time);
+
+	// $newformat = date('d m Y',$time);
+
+	// echo $newformat;
 ?>
-
-<br>
-
- <?php 
-
-
- 	$newformat = strtotime($time);
-
-	$newformat = date('F',$time);
-
-	echo $newformat;
-

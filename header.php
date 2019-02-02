@@ -3,6 +3,15 @@
     Connection with config file.
   */
 
+  // declace page name if any page is not exist page Name
+  if (empty($pageName)) {
+    $pageName = "header.php";
+  }
+  // declace page name if any page is not exist page Name
+  if (empty($framework)) {
+    $framework = "none";
+  }
+  
   include ('function/feb_config.php'); // configuraton file
 ?>
 
@@ -12,10 +21,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--materialize Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- materialize Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <?php if ($pageName == "edit-profile.php"): ?>
+      <!--materialize Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- materialize Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <?php endif ?>
+    
     <!-- theme css -->
     <link rel="stylesheet" type="text/css" href="<?php $feb_install_dir->path(); ?>/assets/css/user.css">
     <title>Hello, world!</title>

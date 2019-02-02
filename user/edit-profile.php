@@ -2,9 +2,12 @@
 /*
   This is form for user edit ther profile if have permission to for edit
 */
-
+  // some required variatble variable
+  $pageName = "edit-profile.php";
+  $framework = "materialize";
   include ('../header.php');
- ?> <!-- included header -->
+
+ ?>
 
 
 

@@ -3,7 +3,6 @@
   This is form for user edit ther profile if have permission to for edit
 */
 
-
   include ('header.php');
 
  ?>
