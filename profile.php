@@ -9,7 +9,7 @@
 		header("Location:login.php");
 	}// if
 
-	// Start here Dashboard For @administrator Editable or anythings
+	// Start here Dashboard For @administrator Editable or do anythings
 	elseif(!empty($_SESSION['feb_wp_get_current_user_id'])){
 		/*
 			$feb_user_id_check is store value 0 or 1.

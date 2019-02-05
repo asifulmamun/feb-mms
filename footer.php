@@ -2,8 +2,8 @@
 	<!-- Jquery for all pages -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	<!-- if page is for edit profile then include edit profile js -->
-	<?php if ($pageName == "edit-profile.php"): ?>
+	<!-- if page need meterialize design framwork then include it -->
+	<?php if ($framework == "materialize"): ?>
 		<!-- materialize Compiled and minified JavaScript -->
 		<script  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<!-- customize or helper initial js for meterial -->

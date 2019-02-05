@@ -3,19 +3,12 @@
   This is form for user edit ther profile if have permission to for edit
 */
 
+  // some required variatble variable
+  $pageName = "login.php"; // page name
+  $framework = "materialize"; //framework name for design
   include ('header.php');
 
  ?>
-
-
-
-
-
-
-
-
-
-
 
 
 

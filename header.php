@@ -7,7 +7,7 @@
   if (empty($pageName)) {
     $pageName = "header.php";
   }
-  // declace page name if any page is not exist page Name
+  // declace framework name if any page is not exist framework name
   if (empty($framework)) {
     $framework = "none";
   }
@@ -22,7 +22,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <?php if ($pageName == "edit-profile.php"): ?>
+    <?php if ($framework == "materialize"): ?>
       <!--materialize Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- materialize Compiled and minified CSS -->
