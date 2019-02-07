@@ -31,7 +31,7 @@
     
     <!-- theme css -->
     <link rel="stylesheet" type="text/css" href="<?php $feb_install_dir->path(); ?>/assets/css/user.css">
-    <title>Hello, world!</title>
+    <title>February Member Management System</title>
   </head>
   <body>
     <!-- Navbar-->
