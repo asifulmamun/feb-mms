@@ -38,21 +38,11 @@
 		  // if wp_user_id exist in data base return 1 in variable: $feb_user_id_checks and work this elsif condition
 		} elseif ($feb_user_id_checks == 1) {
 
+			/*
+				include Porfile Templete of User
+			*/
+			include 'template/profile_template.php';
 
-			echo "include profile template <br>";
-
-			echo $_SESSION['get_avatar_url'];
-		
-			//show frofile information from database thrhough wp_user id seession
-
-			// feb_get_user_passport_number($_SESSION['feb_wp_get_current_user_id']);
-
-			// echo feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
-			// echo feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
-			// echo feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);
-
-
-			// echo feb_user_id_check($_SESSION['feb_wp_get_current_user_id']);
 
 		} // elseif
 			

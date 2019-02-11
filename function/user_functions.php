@@ -51,22 +51,39 @@
 		} // if		 
 	} // function feb_wp_get_email
 
-	// get passport number
-	function feb_get_user_passport_number($wp_user_id){
+	// get Name
+	function feb_get_name($wp_user_id){
 		global $feb_db_connection; // database connection
 		global $tprefix_feb_user_information; // table name with prefix
-		$select_column_name_search_data = 'passport_number'; // column name which is need result to out or get data
+		$select_column_name_search_data = 'name'; // column name which is need result to out or get data
 		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
 		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
 			$result = $feb_db_connection->query($sql);
 			if ($result->num_rows > 0) {
 			    // output data of each row
 			    while($row = $result->fetch_assoc()) {
-					echo $row["passport_number"];
+					echo $row[$select_column_name_search_data];
 				} // while
 			} // if 
-	} // function feb_get_user_passport_number
+	} // function feb_get_name
+	
+	// get country
+	function feb_get_country($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'country'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					echo $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_country
 
+	
 
 
 

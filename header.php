@@ -2,7 +2,6 @@
   /*
     Connection with config file.
   */
-
   // declace page name if any page is not exist page Name
   if (empty($pageName)) {
     $pageName = "header.php";
@@ -13,8 +12,8 @@
   }
   
   include ('function/feb_config.php'); // configuraton file
+  echo $root_web_install;
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -34,22 +33,23 @@
     <title>February Member Management System</title>
   </head>
   <body>
-    <!-- Navbar-->
-    <nav>
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-target="mobile-demo" class="waves-effect waves-light sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a class="dropdown-trigger" data-target="dropdown1" href="sass.html"><i class="material-icons right">arrow_drop_down</i>Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-          </ul>
-        </div>
-      </div> <!-- .container -->
-    </nav>
-
+    <section id="main_header">
+      <!-- Navbar-->
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="<?php $feb_install_dir->path(); ?>" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="waves-effect waves-light sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="">Home</a></li>
+              <li><a href="collapsible.html">Javascript</a></li>
+              <li><a href="mobile.html">Mobile</a></li>
+              <li><a class="dropdown-trigger" data-target="dropdown1" href="sass.html"><i class="material-icons right">arrow_drop_down</i>Sass</a></li>
+            </ul>
+          </div>
+        </div> <!-- .container -->
+      </nav>
+    </section>
     <!-- Dropdown-1 -->
     <ul id="dropdown1" class="dropdown-content">
       <li><a href="#!">one</a></li>
@@ -65,6 +65,3 @@
       <li><a href="collapsible.html">Javascript</a></li>
       <li><a href="mobile.html">Mobile</a></li>
     </ul>
-
-<!-- full container -->
-<div class="container">

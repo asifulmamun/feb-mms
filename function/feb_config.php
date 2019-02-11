@@ -11,19 +11,27 @@
 */
 function feb_install_dir(){
 	function check_ssl() {
-	if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
-		return true; 
-  	}
-} // check_ssl
+		if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) {
+			return true; 
+	  	}
+	} // check_ssl
 if (check_ssl()) {
 	$protocol = "https://"; // decalre protocl as SSL
 } else {
 	$protocol = "http://"; // decalre protocl as !SSL
 } // else
+
 /**
- * Declare here installed directory and folder
+	@ This is main Configuration
+
+ * Declare here installed directory and folder of @FEB-Installed Directory
  */
 $install_path= "nrbrms/feb-mms"; // installed folder name
+
+
+/*
+	@Start here functionality
+*/
 $install_dir = $protocol.$_SERVER['SERVER_NAME']."/".$install_path; // !don't toch here use it as installation directory
 return $install_dir;
 } // print_install_dir()
@@ -37,6 +45,7 @@ class feb_install_directory{
 } // class feb_install_directory
 $feb_install_dir = new feb_install_directory; // create object for path directory installd use for print director <?php $feb_install_dir->path(); same as
 
-
+// include initial file for store variable
+include 'init.php';
 
  ?>
