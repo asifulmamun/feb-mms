@@ -16,3 +16,8 @@ $(".dropdown-trigger").dropdown();
   $(document).ready(function(){
     $('select').formSelect();
   });
+
+  // for carousel
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });

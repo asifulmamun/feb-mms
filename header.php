@@ -10,9 +10,8 @@
   if (empty($framework)) {
     $framework = "none";
   }
-  
+
   include ('function/feb_config.php'); // configuraton file
-  echo $root_web_install;
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,7 +20,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <?php if ($framework == "materialize"): ?>
+      <?php if ($framework == "materialize"): ?>
       <!--materialize Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- materialize Compiled and minified CSS -->
@@ -41,10 +40,10 @@
             <a href="<?php $feb_install_dir->path(); ?>" class="brand-logo">Logo</a>
             <a href="#" data-target="mobile-demo" class="waves-effect waves-light sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-              <li><a href="">Home</a></li>
+              <li><a href="<?php echo $root_web_install ?>">Home</a></li>
               <li><a href="collapsible.html">Javascript</a></li>
               <li><a href="mobile.html">Mobile</a></li>
-              <li><a class="dropdown-trigger" data-target="dropdown1" href="sass.html"><i class="material-icons right">arrow_drop_down</i>Sass</a></li>
+              <li><a class="dropdown-trigger" data-target="dropdown1" href="sass.html">Sass</a></li>
             </ul>
           </div>
         </div> <!-- .container -->

@@ -16,12 +16,12 @@
  -->  
 
 <div class="row">
-	<div class="col s4">
+	<div class="col m4 s12">
         <!-- INCLUDED SIDEBAR -->
         <?php include 'template/profile_template_sidebar.php'; ?>
   </div>
 
-  <div class="col s8">
+  <div class="col m8 s12">
         <!-- INCLUDED SIDEBAR -->
         <?php include 'template/profile_template_page.php'; ?>
   </div>

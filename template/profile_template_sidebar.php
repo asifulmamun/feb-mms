@@ -14,4 +14,15 @@
       </span>
     </div>
   </div>
+  
+   <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">About of <?php echo feb_get_name($_SESSION['feb_wp_get_current_user_id']); ?></span>
+           <div class="progress"><div class="determinate"></div></div>
+          <p><?php echo feb_wp_get_user_description($_SESSION['feb_wp_get_current_user_id'], 'description'); ?></p>
+        </div>
+        <div class="card-action">
+          <a href="#"><?php echo feb_wp_get_email($_SESSION['feb_wp_get_current_user_id']); ?></a>
+        </div>
+      </div>
 </div>
