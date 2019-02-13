@@ -21,3 +21,13 @@ $(".dropdown-trigger").dropdown();
   $(document).ready(function(){
     $('.carousel').carousel();
   });
+
+  // tooltips
+   $(document).ready(function(){
+    $('.tooltipped').tooltip();
+  });
+
+   // image zoomer or materialbox
+    $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
