@@ -26,7 +26,7 @@ if (check_ssl()) {
 
  * Declare here installed directory and folder of @FEB-Installed Directory
  */
-$install_path= "nrbrms/feb-mms"; // installed folder name
+$install_path= "feb-mms"; // installed folder name
 
 
 /*
