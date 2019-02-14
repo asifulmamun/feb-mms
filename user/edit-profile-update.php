@@ -107,7 +107,10 @@
 				WHERE `wp_user_id`='$feb_wp_get_current_user_id'";
 
 			if (mysqli_query($feb_db_connection, $update)) {
-			    echo '<br><b>Record updated successfully</b><br>';
+			?>
+				<script type="text/javascript">alert("Your Information have saved.");</script>
+			<?php
+				header("Location: profile-update-success.php");
 			} else {
 			    echo "Error updating record: " . mysqli_error($conn);
 			} // If Update Msg

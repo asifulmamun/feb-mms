@@ -108,6 +108,102 @@
 			} // if 
 	} // function feb_get_name
 	
+	// get feb_get_date_of_birth
+	function feb_get_date_of_birth($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'date_of_birth'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_date_of_birth
+
+	// get feb_get_fathers_name
+	function feb_get_fathers_name($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'fathers_name'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_fathersname
+
+	// get feb_get_mothers_name
+	function feb_get_mothers_name($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'mothers_name'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_mothers_name
+
+	// get feb_get_gender
+	function feb_get_gender($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'gender'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_gender
+
+	// get feb_get_religion
+	function feb_get_religion($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'religion'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_religion
+
+	// get feb_get_region
+	function feb_get_region($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'region'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_region
+
 	// get country
 	function feb_get_country($wp_user_id){
 		global $feb_db_connection; // database connection
@@ -124,6 +220,251 @@
 			} // if 
 	} // function feb_get_country
 
+	// get feb_get_mobile
+	function feb_get_mobile($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'mobile'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_mobile
+
+	// get feb_get_nearest_bangladeshi_mission
+	function feb_get_nearest_bangladeshi_mission($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'nearest_bangladeshi_mission'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_nearest_bangladeshi_mission
+
+	// get feb_get_national_or_smart_id
+	function feb_get_national_or_smart_id($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'national_or_smart_id'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_national_or_smart_id
+
+
+/*
+	@ Present Address
+*/
+
+	// get feb_get_pr_flat_house_no
+	function feb_get_pr_flat_house_no($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pr_flat_house_no'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pr_flat_house_no
+
+	// get feb_get_pr_road_no
+	function feb_get_pr_road_no($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pr_road_no'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pr_road_no
+
+	// get feb_get_pr_city_town
+	function feb_get_pr_city_town($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pr_city_town'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pr_city_town
+	
+	// get feb_get_pr_zip_post
+	function feb_get_pr_zip_post($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pr_zip_post'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pr_zip_post
+
+
+/*
+	@ Parmanent Address
+*/
+
+	// get feb_get_pe_flat_house_no
+	function feb_get_pe_flat_house_no($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pe_flat_house_no'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pe_flat_house_no
+
+	// get feb_get_pe_road_no
+	function feb_get_pe_road_no($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pe_road_no'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pe_road_no
+
+	// get feb_get_pe_city_town
+	function feb_get_pe_city_town($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pe_city_town'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pe_city_town
+	
+	// get feb_get_pe_zip_post
+	function feb_get_pe_zip_post($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'pe_zip_post'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_pe_zip_post
+
+
+
+/*
+	@ Passport Information
+*/
+
+	// get feb_get_passport_number
+	function feb_get_passport_number($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'passport_number'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_passport_number
+
+	// get feb_get_passport_issue
+	function feb_get_passport_issue($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'passport_issue'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_passport_issue
+
+	// get feb_get_passport_expire
+	function feb_get_passport_expire($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'passport_expire'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_passport_expire
+
+
+
+/*
+	@ Get Others Infromtation Pyament etc from feb database
+*/
 	// get feb_get_reg_fee
 	function feb_get_reg_fee($wp_user_id){
 		global $feb_db_connection; // database connection
@@ -155,23 +496,5 @@
 				} // while
 			} // if 
 	} // function feb_get_certificate_fee
-
-	// get feb_get_date_of_birth
-	function feb_get_date_of_birth($wp_user_id){
-		global $feb_db_connection; // database connection
-		global $tprefix_feb_user_information; // table name with prefix
-		$select_column_name_search_data = 'date_of_birth'; // column name which is need result to out or get data
-		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
-		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
-			$result = $feb_db_connection->query($sql);
-			if ($result->num_rows > 0) {
-			    // output data of each row
-			    while($row = $result->fetch_assoc()) {
-					return $row[$select_column_name_search_data];
-				} // while
-			} // if 
-	} // function feb_get_date_of_birth
-
-
 
  ?>
