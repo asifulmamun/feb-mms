@@ -89,7 +89,7 @@
 			<div class="row">
 				<div class="input-field col s6">
 				  <i class="material-icons prefix">email</i>
-				  <input name="email" id="email" type="email" class="validate" value="asifulmamun@gmail.com">
+				  <input name="email" id="email" type="email" class="validate" value="null">
 				  <label for="email">Email</label>
 				</div>
 				<div class="input-field col s6">
