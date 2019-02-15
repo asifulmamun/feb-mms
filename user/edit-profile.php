@@ -71,8 +71,8 @@
 				</div>
 				<div class="input-field col s6">
 					<i class="material-icons prefix">nature_people</i>
-					<input name="relegion" id="Relegion" type="text" class="validate" value="<?php echo feb_get_religion($_SESSION['feb_wp_get_current_user_id']); ?>">
-					<label for="Relegion">Relegion</label>
+					<input name="religion" id="Religion" type="text" class="validate" value="<?php echo feb_get_religion($_SESSION['feb_wp_get_current_user_id']); ?>">
+					<label for="Religion">Religion</label>
 				</div>
 				<div class="input-field col s6">
 					<i class="material-icons prefix">map</i>
@@ -103,7 +103,7 @@
 				<div class="input-field col s6">
 				  <i class="material-icons prefix">email</i>
 				  <input name="email" id="email" type="email" class="validate" value="<?php echo feb_wp_get_email($_SESSION['feb_wp_get_current_user_id']); ?>">
-				  <label for="email">Email</label>
+				  <label for="email">Email From Main Dashboard</label>
 				</div>
 				<div class="input-field col s6">
 				  <i class="material-icons prefix">phone</i>

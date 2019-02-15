@@ -220,6 +220,22 @@
 			} // if 
 	} // function feb_get_country
 
+	// get feb_get_email
+	function feb_get_email($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'email'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_email
+
 	// get feb_get_mobile
 	function feb_get_mobile($wp_user_id){
 		global $feb_db_connection; // database connection

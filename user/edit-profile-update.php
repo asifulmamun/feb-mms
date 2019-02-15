@@ -28,7 +28,7 @@
 		$fathersName = $_POST['fathersName']; // Father's Name
 		$mothersName = $_POST['mothersName']; // Mother's Name
 		$gender = $_POST['gender']; // Gender
-		$relegion = $_POST['relegion']; // Relegion
+		$religion = $_POST['religion']; // Relegion
 		$region = $_POST['region']; // Region
 		$country = $_POST['country']; // Country
 		$email = $_POST['email']; // Email
@@ -87,9 +87,10 @@
 				`fathers_name`='$fathersName',
 				`mothers_name`='$mothersName',
 				`gender`='$gender',
-				`religion`='$relegion',
+				`religion`='$religion',
 				`region`='$region',
 				`country`='$country',
+				`email`='$email',
 				`mobile`='$mobileNumber',
 				`nearest_bangladeshi_mission`='$nearestBangladeshMission',
 				`national_or_smart_id`='$nidSmartCardNo',
