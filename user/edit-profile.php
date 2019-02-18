@@ -20,9 +20,33 @@
   */
  -->  
 <!-- full container -->
+<br><br><br>
 <div class="container">
 	
 	<div class="row">
+
+		<div class="row">
+			<div class="input-field col s6">
+			   <img
+		        src="http://0.gravatar.com/avatar/<?php echo md5(feb_wp_get_email($_SESSION['feb_wp_get_current_user_id'])); ?>?s=200"
+		        alt="<?php echo feb_get_name($_SESSION['feb_wp_get_current_user_id']); ?>"
+		        data-position="bottom"
+		        data-tooltip="Click this image for view big size Image."
+		        class="materialboxed tooltipped"
+		        style="width: 60px;height: auto;border-radius: 50%;"><br>
+		        <a class="waves-effect waves-light btn" href="https://en.gravatar.com/">Edit Your Profile Picture.</a>
+			</div>
+			<div class="input-field col s6">
+				<h5><u><b>Change Photo Process:</b></u></h5>
+				<p>
+					First Sign Up or Login In Gravature Then Upload your high quality Image. Then you can use this image any Wbsite.
+				</p>
+				<p>
+					Then you will not need re upload your another web site. Because this is global profile picture system.
+				</p>
+			</div>
+		</div>
+
 		<form class="col s12" action="edit-profile-update.php" method="post">
 			<div class="row">
 				<div class="input-field col s12"><p><u><b>Parsonal Information</b></u></p></div>
@@ -214,7 +238,7 @@
 
 	</div> <!-- .row -->
 
-
+<br><br><br>
 <!-- Full Container End -->
 </div> <!-- .container -->
 <!--
