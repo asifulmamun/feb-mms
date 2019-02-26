@@ -44,7 +44,7 @@
               <li><a href="<?php $feb_install_dir->path(); ?>/user/dashboard">Dashboard</a></li>
               <li><a href="<?php $feb_install_dir->path(); ?>/">Profile</a></li>
               <li><a href="<?php $feb_install_dir->path(); ?>/user">Edit Profile</a></li>
-              <li><a href="<?php echo $root_web_install; ?>/wp-login.php?action=logout">Log Out</a></li>
+              <li><a href="<?php echo $root_web_install; ?>wp-login.php?action=logout">Log Out</a></li>
             </ul>
           </div>
         </div> <!-- .container -->
@@ -57,5 +57,5 @@
       <li><a href="<?php $feb_install_dir->path(); ?>/user/dashboard">Dashboard</a></li>
       <li><a href="<?php $feb_install_dir->path(); ?>/">Profile</a></li>
       <li><a href="<?php $feb_install_dir->path(); ?>/user">Edit Profile</a></li>
-      <li><a href="<?php echo $root_web_install; ?>/wp-login.php?action=logout">Log Out</a></li>
+      <li><a href="<?php echo $root_web_install; ?>wp-login.php?action=logout">Log Out</a></li>
     </ul>
