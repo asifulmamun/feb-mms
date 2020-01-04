@@ -31,11 +31,13 @@
         </span>
       </small>
     </div>
-     <img src="https://www.countryflags.io/<?php echo feb_get_country($_SESSION['feb_wp_get_current_user_id']); ?>/flat/64.png" data-position="bottom"
+     <img src="https://www.countryflags.io/<?php
+          $feb_get_country = feb_get_country($_SESSION['feb_wp_get_current_user_id']);
+          echo $feb_get_country;
+         ?>/flat/64.png" data-position="bottom"
           data-tooltip="<?php 
             $countryJson = file_get_contents("http://country.io/names.json"); // get json
             $countryArray = json_decode($countryJson); // decode json
-            $feb_get_country = feb_get_country($_SESSION['feb_wp_get_current_user_id']);
             echo $countryArray->$feb_get_country;
           ?>"
         class="tooltipped"

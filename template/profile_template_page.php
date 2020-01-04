@@ -123,10 +123,7 @@
                 <th>:</th>
                 <th>
                   <?php 
-                    $countryJson = file_get_contents("http://country.io/names.json"); // get json
-                    $countryArray = json_decode($countryJson); // decode json
-                    $feb_get_country = feb_get_country($_SESSION['feb_wp_get_current_user_id']);
-                    echo $countryArray->$feb_get_country;
+                    echo $countryArray->$feb_get_country; // variable declared profile_template_sidebar.php
                   ?>            
                 </th>
             </tr>
