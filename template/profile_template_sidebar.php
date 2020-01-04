@@ -31,13 +31,13 @@
         </span>
       </small>
     </div>
+    <!-- json decalred init.php -->
      <img src="https://www.countryflags.io/<?php
           $feb_get_country = feb_get_country($_SESSION['feb_wp_get_current_user_id']); // declare country short name
           echo $feb_get_country; // country shortname
          ?>/flat/64.png" data-position="bottom"
           data-tooltip="<?php 
-            $feb_get_country = $countryArray->$feb_get_country; // decalere country full name from decoded json array
-            echo $feb_get_country; // print country full name
+            echo $countryArray->$feb_get_country; // decalere country full name from decoded json array init.php and profile_template_sidebar.php
           ?>"
         class="tooltipped"
         style="cursor:pointer;">

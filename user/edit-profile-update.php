@@ -79,8 +79,6 @@
 		$convert_passportExpireDate = strtotime($get_passportExpireDate); // Passport Expire Date
 		$passportExpireDate = date('Y-m-d',$convert_passportExpireDate); // Passport Expire Date
 
-		
-			
 			$update = "UPDATE $tprefix_feb_user_information SET
 				`name`='$name',
 				`date_of_birth`='$dateOfBirth',
@@ -108,9 +106,6 @@
 				WHERE `wp_user_id`='$feb_wp_get_current_user_id'";
 
 			if (mysqli_query($feb_db_connection, $update)) {
-			?>
-				<script type="text/javascript">alert("Your Information have saved.");</script>
-			<?php
 				header("Location: profile-update-success.php");
 			} else {
 			    echo "Error updating record: " . mysqli_error($conn);

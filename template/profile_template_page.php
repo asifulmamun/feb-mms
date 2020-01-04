@@ -123,8 +123,7 @@
                 <th>:</th>
                 <th>
                   <?php 
-                    echo $feb_get_country;
-                    //echo $countryArray->$feb_get_country; // variable declared profile_template_sidebar.php
+                    echo $countryArray->$feb_get_country; // decalere country full name from decoded json array init.php and profile_template_sidebar.php
                   ?>            
                 </th>
             </tr>
