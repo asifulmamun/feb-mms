@@ -40,7 +40,7 @@
             $countryJson = utf8_encode($countryJson); // encode utf8
             $countryArray = json_decode($countryJson); // decode json
             $feb_get_country = $countryArray->$feb_get_country; // decalere country full name from decoded json array
-            var_dump($countryArray) ; // print country full name
+            echo $feb_get_country; // print country full name
           ?>"
         class="tooltipped"
         style="cursor:pointer;">
