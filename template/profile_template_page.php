@@ -248,7 +248,7 @@
                 <th><?php echo feb_get_passport_number($_SESSION['feb_wp_get_current_user_id']); ?></th>
             </tr>
             <tr>
-                <th>City/Town</th>
+                <th>Passport Issued</th>
                 <th>:</th>
                 <th>
                   <?php
@@ -262,7 +262,7 @@
                 </th>
             </tr>
             <tr>
-                <th>Zip/Post Code</th>
+                <th>Passport Expire</th>
                 <th>:</th>
                 <th>
                   <?php
