@@ -36,9 +36,10 @@
           echo $feb_get_country;
          ?>/flat/64.png" data-position="bottom"
           data-tooltip="<?php 
-            $countryJson = file_get_contents("http://country.io/names.json"); // get json
-            $countryArray = json_decode($countryJson); // decode json
-            echo $countryArray->$feb_get_country;
+            echo $feb_get_country;
+            // $countryJson = file_get_contents("http://country.io/names.json"); // get json
+            // $countryArray = json_decode($countryJson); // decode json
+            // echo $countryArray->$feb_get_country;
           ?>"
         class="tooltipped"
         style="cursor:pointer;">

@@ -123,7 +123,8 @@
                 <th>:</th>
                 <th>
                   <?php 
-                    echo $countryArray->$feb_get_country; // variable declared profile_template_sidebar.php
+                    echo $feb_get_country;
+                    //echo $countryArray->$feb_get_country; // variable declared profile_template_sidebar.php
                   ?>            
                 </th>
             </tr>
