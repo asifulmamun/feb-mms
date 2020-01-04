@@ -45,9 +45,17 @@
   
    <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">About of <?php echo feb_get_name($_SESSION['feb_wp_get_current_user_id']); ?></span>
+          <span class="card-title">About of <?php echo feb_get_name($_SESSION['feb_wp_get_current_user_id']); ?><a data-position="bottom"
+        data-tooltip="Click here to for edit your about/bigraphical info with fill up box from dashboard."
+        class="tooltipped" style="color:#fff;" href="<?php $feb_install_dir; ?>/wp-admin/profile.php#description"> <i class="tiny material-icons">edit</i></a></span>
            <div class="progress"><div class="determinate"></div></div>
-          <p><?php echo feb_wp_get_user_description($_SESSION['feb_wp_get_current_user_id'], 'description'); ?></p>
+          <p><?php
+                  if (!empty(feb_wp_get_user_description($_SESSION['feb_wp_get_current_user_id'], 'description'))) {
+                    echo feb_wp_get_user_description($_SESSION['feb_wp_get_current_user_id'], 'description');
+                  }else {
+                    echo "You have not set your about information/bigraphical info. Please Update your information from your dashboard or click edit button for update your information/bigraphical info.";
+                  }
+           ?></p>
         </div>
         <div class="card-action">
           <a href="#"><?php echo feb_wp_get_email($_SESSION['feb_wp_get_current_user_id']); ?></a>
