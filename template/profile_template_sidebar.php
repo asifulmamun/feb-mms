@@ -36,10 +36,11 @@
           echo $feb_get_country;
          ?>/flat/64.png" data-position="bottom"
           data-tooltip="<?php 
-            echo $feb_get_country;
-            // $countryJson = file_get_contents("http://country.io/names.json"); // get json
-            // $countryArray = json_decode($countryJson); // decode json
-            // echo $countryArray->$feb_get_country;
+            $countryJson = file_get_contents("http://country.io/names.json"); // get json
+            $countryJson = utf8_encode($countryJson); // encode utf8
+            $countryArray = json_decode($countryJson); // decode json
+            $feb_get_country = $countryArray->$feb_get_country; // decalere country full name from decoded json array
+            echo $feb_get_country; // print country full name
           ?>"
         class="tooltipped"
         style="cursor:pointer;">
