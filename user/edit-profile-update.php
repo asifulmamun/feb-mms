@@ -12,10 +12,10 @@
 
 	$feb_wp_get_current_user_id = $_SESSION['feb_wp_get_current_user_id']; // declare current user id in variable
 	$feb_user_id_checks = feb_user_id_check($_SESSION['feb_wp_get_current_user_id']); // check this id stored in feb user table - if user stored result true or false with count 0 or 1
+	
 	$permission_edit_profiledb = feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id']); // get permssion status from db
-	echo $permission_edit_profiledb;
 	// if wp_user_id is not exist in database return 0 and insert id with this condition
-	if ($feb_user_id_checks == 1) {
+	if ($feb_user_id_checks == 1 && $permission_edit_profiledb == 1) {
 
 		/*
 			@Hidden Input
@@ -117,5 +117,8 @@
 			} // If Update Msg
 
 	} // User ID exist if feb_user_id_checks and If permission for edit profile
+	elseif($permission_edit_profiledb == 0){
+		echo "You have not permission for edit your profile. Please contact with Administration.";
+	}else{echo "Site error Unknow. Contact with Developer @asifulmamun."}
 
  ?>
