@@ -14,6 +14,7 @@
 	$feb_user_id_checks = feb_user_id_check($_SESSION['feb_wp_get_current_user_id']); // check this id stored in feb user table - if user stored result true or false with count 0 or 1
 	
 	$permission_edit_profiledb = $_POST['$permission_edit_profiledb']; // get permssion status from db
+	echo $permission_edit_profiledb;
 	// if wp_user_id is not exist in database return 0 and insert id with this condition
 	if ($feb_user_id_checks == 1) {
 
