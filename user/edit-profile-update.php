@@ -15,7 +15,7 @@
 	
 	$permission_edit_profiledb = feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id']); // get permssion status from db
 	// if wp_user_id is not exist in database return 0 and insert id with this condition
-	if ($feb_user_id_checks == 1 && $permission_edit_profiledb == 1) {
+	if ($feb_user_id_checks == 1 and $permission_edit_profiledb == 1) {
 
 		/*
 			@Hidden Input
