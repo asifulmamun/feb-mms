@@ -117,6 +117,6 @@
 			    echo "Error updating record:";
 			} // If Update Msg
 
-	} // User ID exist if feb_user_id_checks
+	} // User ID exist if feb_user_id_checks and If permission for edit profile
 
  ?>
