@@ -131,8 +131,9 @@
 					<i style="font-size:220px" class="material-icons">sentiment_very_dissatisfied</i>
 					</span>
 					<br>You have not permission for edit your profile.
-					<br><span style="color:#fff;">Please contact with Administration.
-					<br><br><a style="color:#000;border:1px solid #000;text-decoration:none;padding:7px 10px;background-color:#fff;box-shadow: 5px 4px 8px #000;" href="../">Go to your Profile</a>
+					<br>Every user can update there information only single time.
+					<br><span style="color:#fff;">Please <a title="Click here for go to contact page." style="color:white;" href="../../contact-us">contact</a> with Administration.
+					<br><br><a title="Click here for go to your profile page." style="color:#000;border:1px solid #000;text-decoration:none;padding:7px 10px;background-color:#fff;box-shadow: 5px 4px 8px #000;" href="../">Go to your Profile</a>
 				</span>
 			</h1>
 		</center>
