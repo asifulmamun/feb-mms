@@ -513,4 +513,20 @@
 			} // if 
 	} // function feb_get_certificate_fee
 
+	// get permission_edit_profile
+	function feb_get_permission_edit_profile($wp_user_id){
+		global $feb_db_connection; // database connection
+		global $tprefix_feb_user_information; // table name with prefix
+		$select_column_name_search_data = 'permission_edit_profile'; // column name which is need result to out or get data
+		$column_name_key_1 = 'wp_user_id'; // which data is exist in this column
+		$sql = "SELECT $select_column_name_search_data FROM $tprefix_feb_user_information WHERE $column_name_key_1=$wp_user_id";
+			$result = $feb_db_connection->query($sql);
+			if ($result->num_rows > 0) {
+			    // output data of each row
+			    while($row = $result->fetch_assoc()) {
+					return $row[$select_column_name_search_data];
+				} // while
+			} // if 
+	} // function feb_get_permission_edit_profile
+
  ?>
