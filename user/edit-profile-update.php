@@ -13,12 +13,12 @@
 	$feb_wp_get_current_user_id = $_SESSION['feb_wp_get_current_user_id']; // declare current user id in variable
 	$feb_user_id_checks = feb_user_id_check($_SESSION['feb_wp_get_current_user_id']); // check this id stored in feb user table - if user stored result true or false with count 0 or 1
 
-	$permission_edit_profiledb = feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id']); // get permssion status from db
+	//$permission_edit_profiledb = ; // get permssion status from db
 	//echo $permission_edit_profiledb . "is permssion";
-	if ($permission_edit_profiledb == "1"){
-		echo $permission_edit_profiledb . "is permssion";
+	if (feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id'])>0){
+		echo feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id']) . "is permssion";
 	}
-	elseif($permission_edit_profiledb == "0"){
+	elseif($permission_edit_profiledb == 0){
 		echo "You have not permission for edit your profile. Please contact with Administration.";
 	}else{echo "Site error Unknow. Contact with Developer @asifulmamun."}
 
