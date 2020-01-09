@@ -107,8 +107,7 @@
 				`pe_zip_post`='$peZipPostCode',
 				`passport_number`='$passportNumber',
 				`passport_issue`='$passportIssueDate',
-				`passport_expire`='$passportExpireDate',
-				`permission_edit_profile`='$permission_edit_profile'
+				`passport_expire`='$passportExpireDate'
 				WHERE `wp_user_id`='$feb_wp_get_current_user_id'";
 
 			if (mysqli_query($feb_db_connection, $update)) {
@@ -118,8 +117,5 @@
 			} // If Update Msg
 
 	} // User ID exist if feb_user_id_checks and If permission for edit profile
-	esleif($permission_edit_profiledb == 0){
-		echo 'You have not permission to edit your profile please contact with Administration.';
-	}
 
  ?>
