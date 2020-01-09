@@ -24,9 +24,12 @@
 			$feb_wp_get_current_user_id = $_SESSION['feb_wp_get_current_user_id']; // declare current user id in variable
 			$feb_wp_get_username = feb_wp_get_username($_SESSION['feb_wp_get_current_user_id']);// wp current user name
 			$feb_wp_get_email = feb_wp_get_email($_SESSION['feb_wp_get_current_user_id']);// wp current user email
+			$passport_number = feb_wp_get_email($_SESSION['feb_wp_get_current_user_id']);// default passport number (email for unique db customer can change it from edit profile)
+			$national_or_smart_id = feb_wp_get_email($_SESSION['feb_wp_get_current_user_id']);// default national or smart Id (email for unique db customer can change it from edit profile)
+			$permission_edit_profile = 1; // default first time edit permission for her profile
 			echo "need to insert data <br>";
 			// query for insert data - user id in data base
-	 		$insert = "INSERT INTO $tprefix_feb_user_information (`wp_user_id`,`username`,`email`) VALUES ($feb_wp_get_current_user_id, '$feb_wp_get_username', '$feb_wp_get_email')";
+	 		$insert = "INSERT INTO $tprefix_feb_user_information (`wp_user_id`,`username`,`email`,`permission_edit_profile`,`passport_number`,`national_or_smart_id`) VALUES ($feb_wp_get_current_user_id, '$feb_wp_get_username', '$feb_wp_get_email', '$permission_edit_profile', '$passport_number', '$national_or_smart_id')";
 			
 			if (mysqli_query($feb_db_connection, $insert)) {
 				echo "inserted";
