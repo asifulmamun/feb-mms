@@ -228,7 +228,7 @@
 				</div>
 			</div>
 			<!-- Hidden Input permssion get from db -->
-			<input name="permission_edit_profiledb" type="hidden" value="<?php echo feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id']); ?>">				
+			<input name="permission_edit_profiledb" type="text" value="<?php echo feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id']); ?>">				
 			<!-- Submit Button -->
 			<div class="edit_profile_submit_btn">
 				<input class="waves-effect waves-light btn" type="submit" name="submit" value="Submit">
