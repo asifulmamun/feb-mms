@@ -35,7 +35,7 @@
 				echo "inserted";
 				// header('Location:profile.php');
 			} else {
-				echo $tprefix_feb_user_information . "<b> Data is not inserted. Error: <b>" . $insert . mysqli_error($feb_db_connection);
+				echo "Data is not inserted. Error:";
 			} // else
 
 		  // if wp_user_id exist in data base return 1 in variable: $feb_user_id_checks and work this elsif condition
