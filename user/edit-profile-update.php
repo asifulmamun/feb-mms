@@ -12,14 +12,19 @@
 
 	$feb_wp_get_current_user_id = $_SESSION['feb_wp_get_current_user_id']; // declare current user id in variable
 	$feb_user_id_checks = feb_user_id_check($_SESSION['feb_wp_get_current_user_id']); // check this id stored in feb user table - if user stored result true or false with count 0 or 1
-
+	
+	$permission_edit_profiledb = $_POST['$permission_edit_profiledb']; // get permssion status from db
 	// if wp_user_id is not exist in database return 0 and insert id with this condition
-	if ($feb_user_id_checks == 1) {
+	if ($feb_user_id_checks == 1 && $permission_edit_profiledb == 1) {
 
 		/*
 			@Hidden Input
-		*/
-		$permission_edit_profile = 0; // Passport Number
+			If user edit there profile this will automatic permission denied for edit with this 0 value.
+			If need again permission to edit profile need bellow process:
+				* Permission give or give access from Admin Dashboard or
+				* Change value coloumn 'permission_edit_profile' = 1 (From database table)	
+ 		*/
+		$permission_edit_profile = 0; // Permission false #default after edit user
 
 		/*
 			@Personal Information
@@ -102,13 +107,14 @@
 				`pe_zip_post`='$peZipPostCode',
 				`passport_number`='$passportNumber',
 				`passport_issue`='$passportIssueDate',
-				`passport_expire`='$passportExpireDate'
+				`passport_expire`='$passportExpireDate',
+				`permission_edit_profile`='$permission_edit_profile'
 				WHERE `wp_user_id`='$feb_wp_get_current_user_id'";
 
 			if (mysqli_query($feb_db_connection, $update)) {
 				header("Location: profile-update-success.php");
 			} else {
-			    echo "Error updating record: " . mysqli_error($conn);
+			    echo "Error updating record:";
 			} // If Update Msg
 
 	} // User ID exist if feb_user_id_checks
