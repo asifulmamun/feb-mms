@@ -118,5 +118,8 @@
 			} // If Update Msg
 
 	} // User ID exist if feb_user_id_checks and If permission for edit profile
+	esleif($permission_edit_profiledb == 0){
+		echo 'You have not permission to edit your profile please contact with Administration.';
+	}
 
  ?>
