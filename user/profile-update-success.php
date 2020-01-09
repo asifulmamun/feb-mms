@@ -40,7 +40,7 @@
 
 
 
-
+<!-- Redirecting Script -->
 <script type="text/javascript">
 function countdown() {
     var i = document.getElementById('counter');

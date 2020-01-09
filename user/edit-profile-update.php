@@ -4,7 +4,7 @@
 	if ($_SERVER['REQUEST_METHOD'] !== "POST") {
 		header("Location: edit-profile.php");
 		die();
-	}
+	}else{
 	
 	// include configuration for database connection and other power
 	include '../function/connection.php'; // connection
@@ -108,7 +108,8 @@
 					`pe_zip_post`='$peZipPostCode',
 					`passport_number`='$passportNumber',
 					`passport_issue`='$passportIssueDate',
-					`passport_expire`='$passportExpireDate'
+					`passport_expire`='$passportExpireDate',
+					`permission_edit_profile`='$permission_edit_profile'
 					WHERE `wp_user_id`='$feb_wp_get_current_user_id'";
 
 				if (mysqli_query($feb_db_connection, $update)) {
@@ -120,9 +121,26 @@
 		} // User ID exist if feb_user_id_checks and If permission for edit profile
 	}
 	elseif(feb_get_permission_edit_profile($_SESSION['feb_wp_get_current_user_id'])==0){
-		echo "You have not permission for edit your profile. Please contact with Administration.";
+?>
+		<!-- Error Templete -->
+		<body style="width:100%;max-height:100vh;color:#fff;background-color:#232222;">
+			<br><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<center>
+			<h1 style="color:red;text-transform:uppercase;line-height:50px;">
+				<span>
+					<i style="font-size:220px" class="material-icons">sentiment_very_dissatisfied</i>
+					</span>
+					<br>You have not permission for edit your profile.
+					<br><span style="color:#fff;">Please contact with Administration.
+					<br><br><a style="color:#000;border:1px solid #000;text-decoration:none;padding:7px 10px;background-color:#fff;box-shadow: 5px 4px 8px #000;" href="../">Go to your Profile</a>
+				</span>
+			</h1>
+		</center>
+	</body><!-- Error Template end -->
+<?php
 	}// get permssion status if false or have not permission
 	else{
 		echo "Site error Unknow. Contact with Developer @asifulmamun.";
 	} //if another error
+} // Check Page Method GET or Post
  ?>
